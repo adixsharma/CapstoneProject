@@ -1,0 +1,244 @@
+/*
+Authors:
+    Aditya Sharma
+*/
+
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.tutor-profile-pic {
+    width: 200px; /* Adjust size as needed */
+    height: 200px; /* Maintain aspect ratio */
+}
+
+.page-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+header form {
+    display: flex;
+    align-items: center;
+}
+
+header nav a {
+    margin-left: 15px;
+}
+
+.numTutorsHeading {
+    padding-left: 1%;
+}
+
+.tutors-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0 2%;
+    justify-content: center;
+}
+
+/* 2 columns when window width is below 1100px */
+@media (max-width: 1100px) {
+    .tutors-list {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+}
+
+/* 1 column when window width is below 790px */
+@media (max-width: 790px) {
+    .tutors-list {
+        grid-template-columns: 1fr; /* 1 column */
+    }
+}
+
+.tutor-card {
+    /*background-color: #fff;*/
+    /*border: 1px solid #ccc;*/
+    /*border-radius: 10px;*/
+    /*width: 400px;*/
+    /*padding: 10px;*/
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+    /*text-align: center;*/
+    background-color: #f9f9f9; /* Light gray background */
+    border: 1px solid #ddd; /* Softer border */
+    border-radius: 15px; /* Slightly rounded corners */
+    width: 380px; /* Adjust card width */
+    padding: 15px; /* More consistent padding */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tutor-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.message-btn {
+    /*background-color: #007bff;*/
+    /*color: white;*/
+    /*border: none;*/
+    /*padding: 5px 10px;*/
+    /*cursor: pointer;*/
+    /*border-radius: 5px;*/
+
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 20px; /* Rounded buttons */
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.message-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/*Message Pop Up styling*/
+#messagePopUp {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1000;
+    width: 400px; /* Fixed width */
+    box-sizing: border-box;
+}
+
+#messagePopUp h3 {
+    margin: 0 0 10px;
+}
+
+#messageText {
+    width: 100%;
+    height: 80px;
+    margin-bottom: 50px; /* Ensure space for buttons */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+#closeMessageBtn,
+#sendMessageBtn {
+    position: absolute;
+    bottom: 20px; /* Distance from bottom edge */
+    width: 100px;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#closeMessageBtn {
+    left: 20px; /* Fixed to leftmost edge with padding */
+    background-color: #dc3545;
+    color: white;
+}
+
+#closeMessageBtn:hover {
+    background-color: #c82333;
+}
+
+#sendMessageBtn {
+    right: 20px; /* Fixed to rightmost edge with padding */
+    background-color: #28a745;
+    color: white;
+}
+
+#sendMessageBtn:hover {
+    background-color: #218838;
+}
+
+
+
+
+.name-container {
+    display: flex; /* Use Flexbox to arrange items in a row */
+    align-items: center; /* Center items vertically */
+    flex-direction: column;
+    margin-bottom: 5px; /* Reduce spacing between tutor name and title */
+}
+
+.tutor {
+    margin: 5px 0; /* Adjust spacing above and below */
+    font-size: 16px; /* Slightly smaller font for the title */
+    color: #555; /* Optional: Softer text color */
+    text-align: center;
+}
+
+.hr_rate{
+    margin-top: 0; /* Remove excess top spacing */
+    margin-bottom: 10px; /* Add slight bottom spacing */
+    font-size: 18px; /* Make rate prominent */
+    color: #000; /* Solid black text */
+}
+
+.tutor-card img {
+    /*width: 80%;*/
+    /*height: auto;*/
+    /*border-radius: 50%;*/
+    width: 80%; /* Maintain size */
+    height: 80%;
+    object-fit: cover; /* Ensure image fits well */
+    border-radius: 50%; /* Keep the circular shape */
+    display: block; /* Ensure no inline spacing issues */
+}
+
+.tutor-image {
+    display: flex;
+    justify-content: center; /* Horizontally center the image */
+    align-items: center; /* Vertically align if needed */
+    margin-bottom: 10px; /* Optional: Add slight spacing below image */
+}
+
+.tutor-card li {
+    list-style: none;
+}
+
+.sorting-container {
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 1%;
+}
+
+#sortBy {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+.video-container {
+    margin-top: 10px;
+}
+video {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+

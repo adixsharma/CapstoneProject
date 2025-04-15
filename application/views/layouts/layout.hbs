@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/css/layout.css">
+    {{#each css }}
+        <link rel='stylesheet' type="text/css" href='/css/{{this}}'/>
+    {{/each}}
+    <script src="/js/loginPopUp.js"></script>
+</head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RC8J01VX0G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RC8J01VX0G');
+</script>
+<body>
+    {{> header}}
+    
+    <div id="loginContainer"></div>
+
+    {{{body}}}
+    {{> footer}}
+
+    {{#each js}}
+        <script src="/js/{{this}}"></script>
+    {{/each}}
+</body>
+</html>

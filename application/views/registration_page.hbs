@@ -1,0 +1,55 @@
+<!-- Register page -->
+<body>
+<!-- New Account header -->
+<div class="new_acc_header">
+    <h1>New Account</h1>
+</div>
+
+<!-- New Account box with entered info -->
+<div class="new_acc_container">
+    <form method="POST">
+        <label for="fname">FIRST NAME*</label>
+        <input type="text" id="fname" name="firstname">
+
+        <label for="lname">LAST NAME*</label>
+        <input type="text" id="lname" name="lastname">
+
+        <label for="email">EMAIL*</label>
+        <input type="email" id="email" name="email">
+
+        <label for="username">USERNAME*</label>
+        <input type="text" id="username" name="username">
+
+        <label for="password">PASSWORD*</label>
+        <input type="password" id="password" name="password"
+               minlength="8"
+               maxlength="50"
+               required
+               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+               title="Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, and one number.">
+
+
+
+        <button type="submit" id="create_button">CREATE A NEW ACCOUNT</button>
+        <a href="#" id="logInButton">ALREADY HAVE AN ACCOUNT? SIGN IN</a>
+
+
+
+        <button class="cancel_button" onclick="window.history.back()">CANCEL</button>
+    </form>
+</div>
+
+
+<!--<div id="message">-->
+<!--    <h3>Password must contain the following:</h3>-->
+<!--    <p id="letter" class="invalid">A <b>lowercase</b> letter</p>-->
+<!--    <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>-->
+<!--    <p id="number" class="invalid">A <b>number</b></p>-->
+<!--    <p id="length" class="invalid">Minimum <b>8 characters</b></p>-->
+<!--</div>-->
+
+</body>
+
+
+
+

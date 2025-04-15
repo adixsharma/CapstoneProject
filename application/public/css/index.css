@@ -1,0 +1,410 @@
+/*
+Authors:
+    Aditya Sharma
+
+*/
+
+
+
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    /*background-color: #f4f4f9;*/
+    /*color: #333;*/
+}
+
+/*!* Intro Section *!*/
+/*.intro {*/
+/*    background-color: #ffffff;*/
+/*    padding: 2rem;*/
+/*    margin: 1rem;*/
+/*    border-radius: 8px;*/
+/*    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+/*}*/
+
+/*.intro h2 {*/
+/*    font-size: 2rem;*/
+/*    margin-bottom: 1rem;*/
+/*}*/
+
+/*.homeContent {*/
+/*    font-size: 1.1rem;*/
+/*    line-height: 1.6;*/
+/*    margin-bottom: 1rem;*/
+/*}*/
+
+/*.homeContent a {*/
+/*    color: #3498db;*/
+/*    text-decoration: none;*/
+/*}*/
+
+/*.homeContent a:hover {*/
+/*    text-decoration: underline;*/
+/*}*/
+
+/*!* Call-to-Action Section *!*/
+/*.call-to-action, .apply-tutor {*/
+/*    background-color: #ffffff;*/
+/*    padding: 2rem;*/
+/*    margin: 1rem;*/
+/*    border-radius: 8px;*/
+/*    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+/*}*/
+
+/*.call-to-action h3, .apply-tutor h3 {*/
+/*    font-size: 1.8rem;*/
+/*    margin-bottom: 1rem;*/
+/*}*/
+
+/*.homeContent {*/
+/*    font-size: 1.1rem;*/
+/*    line-height: 1.6;*/
+/*    margin-bottom: 1rem;*/
+/*}*/
+
+/*.apply-tutor p {*/
+/*    font-size: 1.1rem;*/
+/*    line-height: 1.6;*/
+/*    margin-bottom: 1rem;*/
+/*}*/
+
+/*.apply-tutor .apply-link {*/
+/*    color: #3498db; !* Blue color for link *!*/
+/*    font-weight: bold;*/
+/*    text-decoration: none;*/
+/*}*/
+
+/*.apply-tutor .apply-link:hover {*/
+/*    text-decoration: underline;*/
+/*}*/
+
+/*!* Responsive Design *!*/
+/*@media (max-width: 768px) {*/
+/*    .intro, .call-to-action, .apply-tutor {*/
+/*        padding: 1rem;*/
+/*        margin: 0.5rem;*/
+/*    }*/
+
+/*    .action-buttons a {*/
+/*        padding: 0.6rem 1.5rem;*/
+/*    }*/
+/*}*/
+
+
+/* Header and Main Content */
+h2 {
+    text-align: center;
+    color: #FFCF01;
+    background-color: #231161;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 35px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* About Page */
+.headingInfo{
+    text-align: center;
+    color: #231161;
+    padding: 10px;
+    font-size: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.about-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.profile {
+    text-align: center;
+}
+
+.profile img {
+    width: 150px;
+    height: 200px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.profile h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.profile p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.homeContent {
+    padding: 20px;
+}
+
+footer {
+    margin-top: 700px;
+    background-color: #231161;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.abtBio {
+    text-align: center;
+    display: inline-block;
+    color: #231161;
+    padding: 10px;
+    font-size: 20px;
+    margin-right: auto;
+    width: 300px;
+    background-color: khaki;
+}
+
+
+.courseWork {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* background-color: #ffba70; */
+}
+
+.courseWork li {
+    padding: 10px;
+    background-color: #ddffbd;
+}
+
+.courseWork li:nth-child(even) {
+    background-color: #f4d5d5;
+}
+
+
+
+
+/* Styling for the main banner */
+.home-banner {
+    background-color: #f2f2f2; /* Light gray background */
+    text-align: center;
+    padding: 40px;
+    border-radius: 10px;
+    width: 60%;
+    margin: 0 auto; /* Center horizontally */
+    margin-top: 20px;
+}
+
+.home-banner h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+
+.home-banner p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Styling for the Recent Tutors heading */
+.RecentTutorsHeading {
+    text-align: left;
+    font-size: 1.8em;
+    font-weight: bold;
+    margin: 20px 0;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    width: fit-content;
+    background: white;
+    color: black;
+    border-color: black;
+}
+
+
+.recent-tutors-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates three equal columns */
+    gap: 20px; /* Adds space between the columns */
+    padding: 0 10%;
+    justify-content: center;
+}
+
+/* Responsive Behavior (reuse search results styling) */
+@media (max-width: 1100px) {
+    .recent-tutors-list {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+}
+
+@media (max-width: 790px) {
+    .recent-tutors-list {
+        grid-template-columns: 1fr; /* 1 column */
+    }
+}
+
+/* Tutor cards section */
+.recent-tutors {
+    padding: 20px;
+    text-align: center;
+}
+
+/*.tutor-cards {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    gap: 20px;*/
+/*    flex-wrap: wrap;*/
+/*}*/
+
+.tutor-card {
+    /*background-color: #fff;*/
+    /*border: 1px solid #ccc;*/
+    /*border-radius: 10px;*/
+    /*width: 250px;*/
+    /*padding: 10px;*/
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+    /*text-align: center;*/
+    background-color: #f9f9f9; /* Light gray background */
+    border: 1px solid #ddd; /* Softer border */
+    border-radius: 15px; /* Slightly rounded corners */
+    width: 250px; /* Adjust card width */
+    padding: 15px; /* More consistent padding */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tutor-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.recent-tutors .tutor-card .tutor-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.tutor-card img {
+    width: 80%;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.tutor-info{
+    text-align: left;
+    margin-left: 10px;
+}
+
+.tutor-card h3 {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.tutor-card p {
+    margin: 5px 0;
+}
+
+/* Courses List */
+.tutor-info p.courses {
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.tutor-info ul {
+    padding-left: 20px; /* Align list items properly */
+    margin: 5px 0 0;
+    list-style: none;
+}
+
+.tutor-info li {
+    margin-bottom: 5px;
+}
+
+/* Name and Title Styling */
+.tutor-info .name {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: center; /* Center name */
+}
+
+.tutor-info .tutor {
+    font-size: 1em;
+    color: #555;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.tutor-info a {
+    text-decoration: underline;
+    margin-top: 5px;
+    display: block;
+}
+
+.tutor-info ul li {
+    padding-left: 10%;
+}
+
+/* Name and Title */
+.recent-tutors .tutor-card .name-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.recent-tutors .tutor-card h3 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.recent-tutors .tutor-card p.tutor {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Hourly Rate */
+.recent-tutors .tutor-card .hr_rate {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+/* Courses List */
+.recent-tutors .tutor-card ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+.recent-tutors .tutor-card li {
+    margin: 5px 0;
+}
+
+/* Message Button */
+.recent-tutors .tutor-card .message-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.recent-tutors .tutor-card .message-btn:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,64 @@
+ <!--Authors:
+    Fernando Malca, Aditya Sharma, Geetarth Meduri, Anh Tran, Andre Shannon -->
+
+<h2>{{header_name}}</h2>
+<div class="headingInfo">
+    <h4>Software Engineering SFSU</h4>
+    <h4>Fall 24', 2024</h4>
+    <h4>Section 03</h4>
+    <h4>Team 04</h4>
+</div>
+
+<div class="about-section">
+    {{#if member}}
+        <div class="profile">
+            <img src="{{member.image}}" alt="Profile Picture">
+            <h3>{{member.name}}</h3>
+            <p>{{member.role}}</p>
+            <p class="abtBio">{{member.bio}}</p>
+            <h4>Relevant Coursework:</h4>
+            <u class="courseWork">
+                {{#each member.coursework}}
+                    <li>{{this}}</li>
+                {{/each}}
+            </u>
+        </div>
+    {{else}}
+        <div class="profile">
+            <a href="/about-us/nando-about">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Unknown_person.jpg" alt="Profile Picture">
+                <h3>Fernando Malca</h3>
+                <p>Back-End Team Lead</p>
+            </a>
+        </div>
+        <div class="profile">
+            <a href="/about-us/andre-about">
+                <img src="/images/AndreAboutPage.jpg" alt="Profile Picture">
+                <h3>André Shannon</h3>
+                <p>Team Lead</p>
+            </a>
+        </div>
+        <div class="profile">
+            <a href="/about-us/adi-about">
+                <img src="/images/AdiAboutPage.JPG" alt="Profile Picture">
+                <h3>Aditya Sharma</h3>
+                <p>Team Member</p>
+            </a>
+        </div>
+        <div class="profile">
+            <a href="/about-us/anh-about">
+                <img src="/images/AnhAboutPage.jpeg" alt="Profile Picture">
+                <h3>Anh Tran</h3>
+                <p>Front-End Lead</p>
+            </a>
+        </div>
+        <div class="profile">
+            <a href="/about-us/geetarth-about">
+                <img src="/images/GeetarthAbout.JPG" alt="Profile Picture">
+                <h3>Geetarth Meduri</h3>
+                <p>Github Master</p>
+            </a>
+        </div>
+    {{/if}}
+</div>
+

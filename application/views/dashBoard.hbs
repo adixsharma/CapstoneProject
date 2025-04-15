@@ -1,0 +1,81 @@
+<!--  
+Author: Venkata Geetarth, Meduri
+
+Discription:
+The provided code is a dynamic **HTML template** for a user dashboard with 
+interactive features. It starts by displaying a **welcome header** using 
+placeholders `{{header_name}}` and `{{user_name}}`, which suggests that it 
+is part of a templating engine like Handlebars or a similar server-side 
+framework that populates these values dynamically. The layout includes a 
+**button group** for navigation, containing buttons labeled "Messages" and 
+"Tutor Posts," with an additional button for "Recover Profiles" that is 
+currently commented out, likely for future use.
+
+The **main content area** is divided into two sections: one for **Messages**
+and another for **Posts**. The "Messages" section (`#messageSection`) is 
+intended to display messages dynamically inside the `#messagesContent` 
+container. Similarly, the "Posts" section (`#profileSection`) contains a 
+placeholder (`#profilesContent`) where profile cards are expected to be 
+generated dynamically. This section also includes an "Undo" button 
+(`undoBtn`), which likely allows users to **undo the last delete action**, 
+providing a user-friendly feature to recover recently deleted posts.
+
+The inclusion of a **JavaScript file** (`/dashboard.js`) at the bottom 
+indicates that the functionality of the page, such as dynamic content 
+loading, button interactions, and undo operations, is handled using 
+\external JavaScript. The layout uses **semantic HTML** elements like 
+`<section>` and `<div>` to ensure clean and organized content, and the 
+structure allows for modularity and easy expansion in the future. Overall, 
+this code provides a user-friendly interface for navigating messages and 
+tutor posts while incorporating interactivity and dynamic content updates.
+-->
+<body>
+    <h2>{{header_name}}</h2>
+    <!-- Welcome message -->
+    <p>Welcome to Dashboard, {{user_name}}!</p>
+
+    <div class="container">
+        <!-- Button group for navigation -->
+        <div class="button-group">
+            <button id="MessagesBtn">Messages</button>
+            <button id="tutorPostsBtn">Tutor Posts</button>
+            {{!-- <button id="recoverProfilesBtn">Recover Profiles</button> --}}
+        </div>
+
+        <!-- Message Section -->
+        <section id="messageSection" class="dynamic-section">
+            <h2>Messages</h2>
+            <div id="messagesContent">
+                <!-- Placeholders for individual message -->
+                {{#each messages}}
+                <div class="message">
+                    <p><strong>Name:</strong> {{name}}</p>
+                    <p><strong>Subject:</strong> {{subject}}</p>
+                    <p><strong>Date:</strong> {{date}}</p>
+                    <p><strong>Contact:</strong> {{contact}}</p>
+                    <p><strong>Message:</strong> {{message}}</p>
+                </div>
+                {{/each}}
+            </div>
+        </section>
+
+        <!-- Posts Section -->
+        <section id="profileSection" class="dynamic-section">
+            <h2>Posts</h2>
+            <div class="profile-container" id="profilesContent">
+                <!-- Placeholders for individual post -->
+                {{#each posts}}
+                <div class="post" id="{{id}}" class="{{className}}">
+                    <img src="{{imgSrc}}" alt="Post Image" />
+                    <p><strong>Title:</strong> {{title}}</p>
+                    <p><strong>Description:</strong> {{description}}</p>
+                </div>
+                {{/each}}
+            </div>
+            <button id="undoBtn" class="undo-btn">Undo Last Delete</button>
+        </section>
+    </div>
+
+    <!-- Including the external JS file -->
+    <script src="/dashboard.js"></script>
+</body>

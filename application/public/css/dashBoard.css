@@ -1,0 +1,174 @@
+/*
+Author: Venkata Geetarth, Meduri
+
+Discription:
+The provided CSS code defines the styles for a dashboard page layout, 
+including various sections and interactive elements. The .container 
+class centers the content vertically and horizontally, with a flexbox 
+layout that stacks elements in a column. The .button-group class styles
+a group of buttons, ensuring they are spaced evenly and centered, with 
+a hover effect that changes their background color. The .dynamic-section 
+class applies a light background and box-shadow to a content area, with a 
+max-width of 800px for responsiveness and centered text. The .message 
+section is styled with padding and borders for a clean look, while the 
+.profile-container and .profile-card classes layout user profile cards, 
+displaying them with a flexbox and including hover effects for the cards. 
+The profile cards feature images and a class name in the center, with a 
+elete button positioned in the top-right corner, which has a red background 
+that changes to dark red on hover. Lastly, the .undo-btn class is hidden by 
+default but provides a styled button with a hover effect for undo functionality. 
+This code uses a modern approach to create a visually appealing and responsive 
+dashboard with interactive features like button hovers and card interactivity.
+*/
+
+/* Dashboard Page */
+.container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: flex-start; /* Align vertically to the top */
+  flex-direction: column;  /* Stack elements vertically */
+  height: 10%; /* Full viewport height */
+  padding: 20px; /* Add some padding for breathing space */
+  box-sizing: border-box; /* Ensure padding is included in the height/width calculations */
+  margin-top: 0; /* Ensure there's no extra margin at the top */
+}
+
+
+/* Button Group */
+.button-group {
+  display: flex;
+  justify-content: center; /* Center buttons horizontally */
+  gap: 15px; /* Space between buttons */
+  width: 100%; /* Ensure buttons take up full width */
+  margin-bottom: 20px; /* Add space below the button group */
+}
+
+.button-group button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.button-group button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Dynamic Section */
+.dynamic-section {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  background-color: #f4f4f4; /* Lighter background */
+  width: 70%; /* Width is already set to 70% */
+  max-width: 800px; /* Max width for responsiveness */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto 20px; /* Center horizontally with margin at bottom */
+  text-align: center; /* Center-align text */
+}
+
+.dynamic-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px; /* Reduced margin to bring closer to content */
+}
+
+/* Message Section */
+.message {
+  margin-top: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.message-header, .message-contact, .message-body {
+  margin-bottom: 10px;
+}
+
+/* Profile Container */
+.profile-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center; /* Center profile cards */
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* Profile Card */
+.profile-card {
+  position: relative;
+  width: 150px;
+  height: 180px;
+  background-color: #ffffff;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  transition: box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance hover effect */
+}
+
+.profile-card img {
+  width: 100px;
+  height: 100px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.class-name {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Delete Button */
+.delete-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete-btn:hover {
+  background-color: darkred; /* Darker red on hover */
+}
+
+/* Undo Button */
+.undo-btn {
+  display: none;
+  margin-top: 10px;
+  padding: 5px 10px;
+  font-size: 14px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.undo-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}

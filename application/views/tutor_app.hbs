@@ -1,0 +1,70 @@
+{{!--
+Authors:
+    André
+    Aditya Sharma
+
+Tutor application form
+
+ChatGPT was used to help write this code
+--}}
+<body>
+    <h2>{{header_name}}</h2>
+    <div class="tutor-application">
+        <form method="POST" enctype="multipart/form-data" class="tutor-application-form">
+
+            <p>*Indicates required fields</p>
+
+            <!-- Subject Dropdown populated dynamically -->
+            <label for="subj">Subject (If you want to apply for more than one subject, please fill out an application for each subject)*</label>
+            <select id="subj" name="subj" required>
+                <option value="" disabled selected>Select a subject</option>
+                {{#each subjects}}
+                    <option value="{{this.subject_id}}">{{this.subject_name}}</option>
+                {{/each}}
+            </select>
+
+            <!-- Courses Taken Textbox -->
+            <label for="courses">Courses Taken (Please list only relevant courses for which you have received a B or higher in separated by commas)* <br> Ex: CSC 220 Data Structures, CSC 413 Software Development, etc.</label>
+            <textarea id="courses" name="courses" rows="3" placeholder="Ex: CSC 220 Data Structures, CSC 413 Software Development" required></textarea>
+
+            <!-- Custom Title Area -->
+            <label for="Cmsg">Title of Your Posting*</label>
+            <textarea id="Cmsg" name="Cmsg" rows="1" placeholder="Write a unique title for yourself" required></textarea>
+
+            <!-- Bio Text Area -->
+            <label for="bio">Bio*</label>
+            <textarea id="bio" name="bio" rows="4" placeholder="Write a brief bio about yourself" required></textarea>
+
+            <!-- Hourly Rate Textbox -->
+            <label for="hourlyRate">Hourly Rate ($)*</label>
+            <input type="number" id="hourlyRate" name="hourlyRate" placeholder="Ex: 25.00" min="0" step="0.01" required>
+
+            <!-- Video Description Text Area -->
+            <label for="videoDescription">Video Description (please give a short description of the uploaded video)</label>
+            <textarea id="videoDescription" name="videoDescription" rows="3" placeholder="Describe your video introduction"></textarea>
+
+            <!-- Video Upload -->
+            <label for="video">Upload Video (MP4/MOV):</label>
+            <input type="file" id="video" name="video" accept="video/mp4,video/quicktime" required>
+
+            <!-- Profile Picture Upload -->
+            <label for="profilePic">Profile Picture *</label>
+            <input type="file" id="profilePic" name="profilePic" accept="image/*" required>
+
+            <!-- CV Upload -->
+            <label for="cv">Upload CV *</label>
+            <input type="file" id="cv" name="cv" accept=".pdf, .doc, .docx" required>
+
+            <!-- Buttons -->
+            <div class="form-buttons">
+                <button type="button" id="cancelBtn" class="cancel-button">Cancel</button>
+                <button type="submit" id="submitBtn">Submit Application</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Pass the login status to the frontend
+        window.userLoggedIn = {{userLoggedIn}};
+    </script>
+</body>

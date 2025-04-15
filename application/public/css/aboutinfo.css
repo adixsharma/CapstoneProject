@@ -1,0 +1,56 @@
+.about-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.profile {
+    text-align: center;
+}
+
+.profile img {
+    width: 150px;
+    height: 200px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.profile h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.profile p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.abtBio {
+    text-align: center;
+    display: inline-block;
+    color: #231161;
+    padding: 10px;
+    font-size: 20px;
+    margin-right: auto;
+    width: 300px;
+    background-color: khaki;
+}
+
+
+.courseWork {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* background-color: #ffba70; */
+}
+
+.courseWork li {
+    padding: 10px;
+    background-color: #ddffbd;
+}
+
+.courseWork li:nth-child(even) {
+    background-color: #f4d5d5;
+}

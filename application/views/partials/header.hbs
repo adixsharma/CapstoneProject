@@ -1,0 +1,72 @@
+{{!--
+André Shannon
+
+Header for every page
+Includes disclaimer, links to home, search bar, about, become a tutor, menu for
+login, registration, logout, and dashboard
+--}}
+<div class="header_Container">
+    <nav class="menu_Bar">
+        <h3>
+            SFSU Software Engineering Project CSC 648-848, Fall 2024. For Demonstration Only
+        </h3>
+        <ul>
+
+<!--            <div class="debug-info">-->
+<!--                {{#if user}}-->
+<!--                    <p>User logged in: {{user.username}}</p>-->
+<!--                {{else}}-->
+<!--                    <p>No user logged in</p>-->
+<!--                {{/if}}-->
+<!--            </div>-->
+
+            <li class="home"><h1><a href="/">GatorAid</a></h1></li>
+            
+            <!-- Search Form -->
+            <form id="searchForm" action="/search" method="GET">
+                <select id="subject" name="subject">
+                    <option value="" {{#if (equals selectedSubject "")}}selected{{/if}}>All Subjects</option>
+                    {{#each subjects}}
+                        <option value="{{this.subject_name}}" {{#if (equals ../selectedSubject this.subject_name)}}selected{{/if}}>
+                            {{this.subject_name}}
+                        </option>
+                    {{/each}}
+                </select>
+
+                <input type="text" id="search" name="search" placeholder="Search for tutors" value="{{search}}">
+                <button type="submit" id="searchButton">Search</button>
+            </form>
+
+            <!-- Main Navigation Links -->
+            <div class="nav-links">
+                <li><a href="/about-us">About</a></li>
+                <li><a href="/tutor-app">Apply to be a Tutor</a></li>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="menu-container">
+                <!-- Hamburger Icon -->
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+
+                <!-- Menu Items for Mobile -->
+                <div class="menu-items" id="menuItems">
+                    {{#if user}}
+                        <a href="/dashboard">Dashboard</a>
+                        <a href="/logout">Logout</a>
+                    {{else}}
+                        <a href="#" id="logInButton">Login</a>
+                        <a href="/registration_page">Registration</a>
+                    {{/if}}
+                </div>
+            </div>
+
+            
+
+            <script src="/js/menu.js"></script>
+        </ul>
+    </nav>
+</div>

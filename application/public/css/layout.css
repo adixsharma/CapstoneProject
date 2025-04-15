@@ -1,0 +1,300 @@
+/*
+    Authors: Aditya Sharma, Anh Tran, André Shannon
+
+    css for the header/nav bar and footer
+*/
+
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Nav Bar */
+.menu_Bar ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  background-color: #231161;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.menu_Bar h3 {
+  display: flex;
+  padding: 12px 20px 0px;
+  justify-content: center;
+  text-decoration: none;
+  font-style: italic;
+  color: #FFCF01;
+  background-color: #231161;
+  margin: 0;
+}
+
+/* Ensure .home stays on the left */
+.home {
+  flex: 0 1 auto;
+  text-align: left;
+  font-style: oblique;
+  font-family: monospace;
+}
+
+li.home h1 a {
+  font-size: 24px;
+}
+
+.nav-links {
+  flex: .5;
+  display: flex;
+  justify-content: center; /* Center the nav links */
+  align-items: center;
+  text-align: center;
+}
+
+.menu_Bar li a {
+  display: block;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+.menu_Bar li a:hover {
+  background-color: #FFCF01;
+  color: #231161;
+  border-radius: 8px;
+}
+
+/* Searching */
+.menu_Bar form {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  padding: 20px;
+}
+
+.menu_Bar form select, .menu_Bar form input, .menu_Bar form button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  margin: 0;
+  font-size: 18px;
+}
+
+.menu_Bar form select {
+  /* Aligns on Chrome, but shows up slightly unaligned on Firefox */
+  padding: 9px 10px 10px 10px;
+  border-radius: 10px 0 0 10px;
+  background-color: lightgray;
+  border-right: none;
+}
+
+.menu_Bar form input {
+  flex: 1;
+  max-width: 800px;
+  min-width: 80px;
+}
+
+.menu_Bar form button {
+  border-radius: 0 10px 10px 0;
+  border-left: none;
+  background-color: lightgray;
+}
+
+.menu_Bar form select:hover {
+  background-color: darkgray;
+}
+
+.menu_Bar form button:hover {
+  background-color: darkgray;
+}
+
+/* Three line menu */
+.menu-container {
+  flex: 0 1 auto;
+  position: relative;
+  display: inline-block;
+  padding: 20px;
+}
+
+/* Hamburger Icon */
+.menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  /* transition: 0.3s; */
+}
+
+.menu-icon:hover {
+  background-color: #FFCF01;
+  color: #231161;
+  border-radius: 8px;
+}
+
+.menu-icon:hover .bar {
+  background-color: #231161;
+}
+
+
+/* Menu Items (Hidden by default) */
+.menu-items {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.menu-items a {
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.menu-items a:hover {
+  background-color: #ddd;
+}
+
+/* don't show About and Become a Tutor on wide desktop display */
+.mobile-nav-links {
+  display: none;
+}
+
+/* Header and Main Content */
+h2 {
+  text-align: center;
+  color: #FFCF01;
+  background-color: #231161;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 35px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* About Page */
+.headingInfo{
+  text-align: center;
+  color: #231161;
+  padding: 10px;
+  font-size: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.homeContent {
+  padding: 20px;
+}
+
+footer {
+  margin-top: 700px;
+  background-color: #231161;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+
+/* Styling for the login popup */
+#loginPopUp {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  width: 300px;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 1000;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding-right: 2em;
+}
+
+.sign-up-header{
+  color: black;
+  background: white;
+}
+
+#loginPopUp h2 {
+  font-size: 1.5em;
+  margin: 0 0 20px;
+  font-weight: bold;
+}
+
+#loginPopUp label {
+  display: block;
+  font-size: 0.9em;
+  text-align: left;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+#loginPopUp input {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+}
+
+.login-links {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9em;
+  margin-bottom: 30px;
+  text-decoration: underline;
+}
+
+.login-links a {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.login-links a:hover {
+  text-decoration: underline;
+}
+
+#loginSubmitBtn {
+  width: 100%;
+  background-color: #000;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#loginSubmitBtn:hover {
+  background-color: #333;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5em;
+  color: #000;
+  cursor: pointer;
+}

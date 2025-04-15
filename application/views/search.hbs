@@ -1,0 +1,77 @@
+{{!--
+Authors:
+    André
+    Aditya Sharma
+    Anh Tran
+    Fernando Malca
+ --}}   
+
+<body>
+<section>
+    <h2>{{header_name}}</h2>
+    {{#if num_tutors}}
+        <h4 class="numTutorsHeading">Number of Tutors Found: {{num_tutors}}</h4>
+    {{/if}}
+    <!-- Sorting Options -->
+    <div class="sorting-container">
+        <label for="sortBy">Sort by Hourly Rate:</label>
+        <select id="sortBy" name="sortBy" onchange="updateSorting()">
+            <option value="lowToHigh" {{#if (equals sortBy "lowToHigh")}}selected{{/if}}>Low to High</option>
+            <option value="highToLow" {{#if (equals sortBy "highToLow")}}selected{{/if}}>High to Low</option>
+        </select>
+    </div>
+    <div class="tutors-list" id="tutors-list">
+        {{#each results}}
+        <div class="tutor-card" id="tutor-card">
+            <div class="tutor-image">
+                <img src="{{profilepic}}" alt="{{first_name}}'s Profile Picture" class="tutor-profile-pic">
+            </div>
+            <div class="tutor-info">
+                <div class="name-container">
+                        <h3 class="name">{{first_name}} {{last_name}} </h3>
+                        <h4 class="tutor"> {{subject_name}} Tutor</h4>
+                        <h4 class="tutor">{{title}}</h4>
+                </div>
+                <p class="hr_rate"><strong>${{hrly_rate}}/hr</strong></p>
+                {{#if cv}}
+                <a href="{{cv}}" download="{{first_name}}_{{last_name}}_CV_{{tutor_id}}.pdf">View CV</a>
+                {{/if}}
+                {{#if videoUrl}}
+                <a href="#" class="openPopup" data-video-id="videoPopup-{{tutor_id}}">Show Introduction Video</a>
+                <!-- Pop-up container (initially hidden) -->
+                <div id="videoPopup-{{tutor_id}}" class="videoPopup popup" style="display: none;">
+                    <div class="popup-content">
+                        <span class="closePopup close">&times;</span>
+                        <video controls width="300">
+                            <source src="/search/video/{{tutor_id}}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>{{video_description}}</p>
+                    </div>
+                </div>
+                {{/if}}
+                <p><strong>Bio:</strong> {{bio}}</p>
+                <p>Courses:</p>
+                <ul>
+                    {{#each courses}}
+                    <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+
+
+                <button class="message-btn" data-tutor="{{last_name}}">Message</button>
+            </div>
+        </div>
+        {{else}}
+        <p>No tutors found for your search criteria.</p>
+        {{/each}}
+    </div>
+</section>
+
+<div id="messagePopUp" style="display: none;">
+    <h3>To: <span id="tutorName"></span></h3>
+    <textarea id="messageText" placeholder="Write your message here..."></textarea>
+    <button id="sendMessageBtn">Send</button>
+    <button id="closeMessageBtn">Close</button>
+</div>
+</body>

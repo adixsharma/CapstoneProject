@@ -1,0 +1,50 @@
+ <!--Authors:
+    Aditya Sharma, Fernando Malca -->
+
+<div class="home-banner">
+    <h1>Welcome to GatorAid!</h1>
+    <p>Find SFSU Tutors Quick <br> or <br> Become A GatorAid Tutor</p>
+</div>
+
+<section class="recent-tutors">
+    <h2 class="RecentTutorsHeading">Recent Tutors:</h2>
+    <div class="recent-tutors-list">
+        {{#each recentTutors}}
+            <div class="tutor-card">
+                <div class="tutor-image">
+                    <img src="{{profilepic}}" alt="{{first_name}}'s Profile Picture" class="tutor-profile-pic">
+                </div>
+                <div class="tutor-info">
+                    <h3>{{first_name}} {{last_name}}</h3>
+                    <p>{{subject_name}} Tutor</p>
+                    <p><strong>${{hrly_rate}}/hr</strong></p>
+                    {{#if cv}}
+                        <a href="{{cv}}" download="{{first_name}}_{{last_name}}_CV_{{tutor_id}}.pdf">View CV</a>
+                    {{/if}}
+                    <p>Courses:</p>
+                    <ul>
+                        {{#each courses}}
+                            <li>{{this}}</li>
+                        {{/each}}
+                    </ul>
+                    <button class="message-btn" data-tutor="{{last_name}}">Message</button>
+                </div>
+            </div>
+        {{else}}
+            <p>No recent tutors available.</p> <!-- Display when no results -->
+        {{/each}}
+    </div>
+</section>
+
+
+    <div id="messagePopUp" style="display: none;">
+        <h3>To: <span id="tutorName"></span></h3>
+        <textarea id="messageText" placeholder="Write your message here..."></textarea>
+        <button id="sendMessageBtn">Send</button>
+
+        <button id="closeMessageBtn">Close</button>
+    </div>
+
+    <script src="../js/messagePopUp.js"></script>
+
+

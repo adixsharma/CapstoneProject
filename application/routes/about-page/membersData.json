@@ -1,0 +1,78 @@
+{
+  "adi-about": {
+    "name": "Aditya Sharma",
+    "role": "Team Member",
+    "bio": "I am a senior at San Francisco State University pursuing a Computer Science degree.\nCurrently I am aiming to graduate in the Spring of 2025 and hopefully land a job as a full stack software developer in time.\nI am a part of Team 04 and I am a team member able to assist in the front and back end of the project.",
+    "coursework": [
+      "CSE 205 - Object-Oriented Programming and Data",
+      "CSE 205 - Object-Oriented Programming and Data",
+      "CSC 413 - Software Development",
+      "CSC 317 - Web Development",
+      "CSC 256 - Machine Structures",
+      "Data Structures"
+    ],
+    "image": "/images/AdiAboutPage.JPG"
+  },
+  "andre-about": {
+    "name": "André Shannon",
+    "role": "Team Lead",
+    "bio": "André is currently pursuing a masters in computer science at\nSan Francisco State University. He received a Bachelor of\nScience in Mathematics and Computer Science from the University\nof Richmond. His current interests are in AI and robotics, and\nin particular reinforcement learning. Some hobbies include\nsoccer, climbing, reading fantasy and science fiction, biking,\nand solving variations of the Rubik’s cube.",
+    "coursework": [
+      "Software Engineering",
+      "High Performance Computing",
+      "Analysis of Algorithms II",
+      "Deep Learning Models",
+      "Programming Languages",
+      "Android Programming",
+      "Computer Security",
+      "Machine Learning",
+      "Advanced Linear Algebra",
+      "Data Structures",
+      "Discrete Structures"
+    ],
+    "image": "/images/AndreAboutPage.JPG"
+  },
+  "anh-about": {
+    "name": "Anh Tran",
+    "role": "Front End Lead",
+    "bio": "I am currently a Computer Science senior student at San Francisco State University.\nMy plan is to graduate by Spring 2025.\nI am the front-end lead of Team 4 for CSC 648.\nI care a lot about appearance, and I want my project to look good the way I envision it.",
+    "coursework": [
+      "CSC 340 - Programming Methodology",
+      "CSC 413 - Software Development",
+      "CSC 317 - Web Development",
+      "CSC 256 - Machine Structures",
+      "CSC 220 - Data Structures"
+    ],
+    "image": "/images/AnhAboutPage.jpeg"
+  },
+  "geetarth-about": {
+    "name": "Venkata Geetarth Meduri",
+    "role": "GitHub Master",
+    "bio": "I am a senior at San Francisco State University pursuing a Computer Science degree.\nCurrently, I am aiming to graduate in the Spring of 2025 and hopefully land a job in the AI field.\nI am a part of Team 04, and I serve as the GitHub Master of the project.",
+    "coursework": [
+      "CSC 340 - Programming Methodology",
+      "CSC 413 - Software Development",
+      "CSC 317 - Web Development",
+      "CSC 415 - Operating Systems",
+      "Data Structures"
+    ],
+    "image": "../Images/GeetarthAbout.JPG"
+  },
+  "nando-about": {
+    "name": "Fernando Malca",
+    "role": "Back-End Team Lead",
+    "bio": "• Senior at San Francisco State University.\n• Pursuing a Bachelor's in Computer Science.\n• Likes to relax and sleep in his free time.",
+    "coursework": [
+      "Software Engineering",
+      "Operating Systems",
+      "Embedded Linux Programming",
+      "Analysis of Algorithms",
+      "Programming Languages",
+      "Machine Learning",
+      "Linear Algebra",
+      "Data Structures",
+      "Discrete Structures"
+    ],
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Unknown_person.jpg"
+  }
+}
